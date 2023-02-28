@@ -1,0 +1,55 @@
+package threeMusketeers;
+
+public abstract class Piece {
+
+    /**
+     * All possible Piece types
+     * Musketeer, Guard, and Blocker
+     */
+    public enum Type {
+        MUSKETEER("MUSKETEER"),
+        GUARD("GUARD"),
+    	BLOCKER("BLOCKER");
+
+        private final String type;
+        Type(final String type) {
+            this.type = type;
+        }
+        public String getType() {
+            return type;
+        }
+    }
+
+    private String symbol;
+    private Type type;
+
+    /**
+     * Construct a new Piece
+     * @param symbol to represent the Piece
+     * @param type a Type of Piece (Musketeer or Guard or Blocker)
+     */
+    public Piece(String symbol, Type type) {
+        this.symbol = symbol;
+        this.type = type;
+    }
+
+    /**
+     * @return symbol representation of Piece
+     */
+    public String getSymbol() {
+        return symbol;
+    }
+
+    /**
+     * @return the Type of piece (Musketeer or Guard or Blocker)
+     */
+    public Type getType() {
+        return type;
+    }
+
+    /**
+     * @param cell a Cell to check conditions of
+     * @return whether this Piece can move onto a given cell
+     */
+    public abstract boolean canMoveOnto(Cell cell);
+}

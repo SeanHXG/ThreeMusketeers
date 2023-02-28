@@ -13,3 +13,4 @@ Some features in this project were used to test out certain design patterns, eve
 Note that this project was originally built in the Eclipse IDE, and may not play properly in other IDEs.
 
 To start the game, simply run the code found in "./src/threeMusketeers/ThreeMusketeers.java".
+Instructions should appear whenever you try to perform an action while inside the game to further explain gameplay.
